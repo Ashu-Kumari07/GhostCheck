@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%BB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<title>How it works - GhostCheck</title>
+</head>
+<body>
+<header id="site-header"></header>
+<main class="wrap page-pad prose">
+  <h1>How GhostCheck works</h1>
+  <p class="muted" style="font-size:1.2rem">GhostCheck compares what a posting says with what the employer's own website shows, and explains every point of the score.</p>
+
+  <h2>Five steps</h2>
+  <ol class="timeline">
+    <li><h3>Read the posting</h3><p>We extract the title, company, location, posted date, pay and description.</p></li>
+    <li><h3>Open the careers page</h3><p>A web agent visits the employer's own site and searches for the role.</p></li>
+    <li><h3>Look for duplicates and reposts</h3><p>We check whether the same role appears repeatedly or in many places.</p></li>
+    <li><h3>Check hiring news</h3><p>We look for recent layoff or hiring-freeze reports about the company.</p></li>
+    <li><h3>Combine the signals</h3><p>Each signal is weighted and merged into one score with a confidence level.</p></li>
+  </ol>
+
+  <h2>The six signals</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Signal</th><th>What it checks</th><th>Weight</th></tr></thead>
+    <tbody>
+      <tr><td>Careers-page match</td><td>Is the role listed on the employer's own careers page?</td><td>30</td></tr>
+      <tr><td>Posting age</td><td>How long the role has been open.</td><td>20</td></tr>
+      <tr><td>Reposts and duplicates</td><td>The same role listed many times or in many places.</td><td>15</td></tr>
+      <tr><td>Description quality</td><td>Specific duties, tools and team versus generic wording.</td><td>15</td></tr>
+      <tr><td>Pay transparency</td><td>Whether a salary range is shown.</td><td>10</td></tr>
+      <tr><td>Company hiring news</td><td>Recent layoff or hiring-freeze news.</td><td>10</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Score bands</h2>
+  <div class="bands">
+    <span class="band" style="background:var(--green)">0-34 Likely Real</span>
+    <span class="band" style="background:var(--amber)">35-64 Uncertain</span>
+    <span class="band" style="background:var(--red)">65-100 Likely Ghost</span>
+  </div>
+
+  <h2>Limits</h2>
+  <p>The score is an estimate, not a fact. Some sites block automated checks, and a role may be filled privately without ever being posted. When a signal cannot be checked, we skip it and lower the confidence label.</p>
+
+  <h2>Powered by TinyFish</h2>
+  <p>The careers-page check is performed by the TinyFish web agent, which follows a plain-English goal on the live website and returns what it found.</p>
+  <p class="disclaimer">This is an estimate based on public information, not a statement of fact about the employer.</p>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/common.js"></script>
+</body>
+</html>

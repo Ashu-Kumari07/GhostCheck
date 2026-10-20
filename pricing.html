@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%BB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<title>Pricing - GhostCheck</title>
+</head>
+<body>
+<header id="site-header"></header>
+<main class="wrap page-pad prose">
+  <h1>Simple pricing</h1>
+  <p class="muted" style="font-size:1.2rem">Start free. Upgrade when you check jobs every week.</p>
+
+  <div class="plans">
+    <article class="plan">
+      <h2>Free</h2>
+      <div class="price">$0</div>
+      <ul><li>3 checks per day</li><li>Full report with evidence</li><li>Shareable score card</li></ul>
+      <a class="btn secondary" href="index.html#check">Start free</a>
+    </article>
+    <article class="plan featured">
+      <span class="tag">Most popular</span>
+      <h2>Pro</h2>
+      <div class="price">$7 <small>/ month</small></div>
+      <ul><li>Unlimited checks</li><li>Saved history</li><li>Alerts when a saved posting goes stale</li><li>Faster checks</li></ul>
+      <button class="btn" data-waitlist="Pro" style="background:var(--orange);color:#1b1b2f">Join waitlist</button>
+    </article>
+    <article class="plan">
+      <h2>Teams</h2>
+      <div class="price">$39 <small>/ month</small></div>
+      <ul><li>Up to 25 seats</li><li>Shared dashboard</li><li>CSV export</li><li>For coaches, bootcamps and career centers</li></ul>
+      <button class="btn secondary" data-waitlist="Teams">Join waitlist</button>
+    </article>
+  </div>
+
+  <h2>Why these prices</h2>
+  <ul>
+    <li>Pro costs less than typical resume and job-tracking subscriptions.</li>
+    <li>One avoided wasted application saves hours of effort.</li>
+    <li>Teams spreads the cost across many job seekers.</li>
+  </ul>
+
+  <h2>Unit economics</h2>
+  <p class="muted">Each full check uses one agent run plus search calls. Cached results are reused, so a posting is verified once.</p>
+  <!-- TODO before submitting: research the current TinyFish credit pricing, calculate real values for the three boxes
+       below, and cite the source. Mark any unverified number as an estimate. -->
+  <div class="econ">
+    <div><strong>Cost per check</strong>Agent run + search calls</div>
+    <div><strong>Checks per Pro user</strong>Estimated monthly usage</div>
+    <div><strong>Target gross margin</strong>Above 70%</div>
+  </div>
+
+  <!-- TODO before submitting: add a "Market facts" section with 3-4 current, cited facts (job seekers, ghost postings,
+       competing tools) and source links. Do not invent statistics. -->
+</main>
+
+<dialog id="waitlist" aria-labelledby="wl-title">
+  <form method="dialog" novalidate>
+    <h2 id="wl-title">Join the <span data-plan></span> waitlist</h2>
+    <label for="wl-email">Email address</label>
+    <input class="field" id="wl-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+    <p class="form-error" role="alert"></p>
+    <div class="dialog-actions">
+      <button class="btn" type="submit">Join waitlist</button>
+      <button class="btn secondary" type="button" data-close>Cancel</button>
+    </div>
+  </form>
+  <div class="thanks" hidden>
+    <h2>Thanks, you are on the list</h2>
+    <p>We will notify you when this plan opens. Nothing was sent anywhere in this demo.</p>
+    <button class="btn" type="button" data-close>Close</button>
+  </div>
+</dialog>
+
+<footer id="site-footer"></footer>
+<script src="js/common.js"></script>
+</body>
+</html>

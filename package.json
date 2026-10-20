@@ -1,0 +1,8 @@
+{
+  "name": "ghostcheck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GhostCheck: verify job postings against the employer's own careers page with TinyFish.",
+  "scripts": { "test": "node test/run.js", "dev": "npx vercel dev" },
+  "engines": { "node": ">=18" }
+}

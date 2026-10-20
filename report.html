@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%BB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<title>Ghost Score report - GhostCheck</title>
+</head>
+<body>
+<header id="site-header"></header>
+<main class="wrap page-pad">
+  <section id="progress" class="panel progress-panel" aria-live="polite">
+    <h1 style="font-size:1.8rem">Checking this job</h1>
+    <div class="progress-bar"><i id="bar"></i></div>
+    <ol id="step-list" class="step-list"></ol>
+    <p id="agent-line" class="agent-line" aria-live="polite"></p>
+    <details id="watch" class="watch" hidden>
+      <summary>Watch the agent browse</summary>
+      <iframe id="watch-frame" title="Live view of the agent browsing the employer's site" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+    </details>
+    <p id="progress-note" class="muted" style="margin:1.2rem 0 0; font-size:.95rem"></p>
+  </section>
+
+  <section id="result" class="panel" hidden></section>
+
+  <section id="error" class="panel empty" hidden>
+    <h1 style="font-size:1.8rem">We could not finish this check</h1>
+    <p id="error-text" style="margin-inline:auto"></p>
+    <a class="btn" href="index.html#check">Try again</a>
+    <a class="btn secondary" href="report.html?demo=ghost">See an example</a>
+  </section>
+
+  <section id="empty" class="panel empty" hidden>
+    <h1 style="font-size:1.8rem">No job to check yet</h1>
+    <p style="margin-inline:auto">Paste a job link on the home page, or open one of the examples.</p>
+    <a class="btn" href="index.html#check">Check a job</a>
+  </section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/analyze.js"></script>
+<script src="js/common.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>

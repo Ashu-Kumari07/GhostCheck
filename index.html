@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%BB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<title>GhostCheck - Stop applying to jobs that do not exist</title>
+<meta name="description" content="Paste a job link. A web agent checks the employer's own careers page and gives you a Ghost Score with the evidence.">
+</head>
+<body>
+<a class="skip" href="#check">Skip to the job check</a>
+<header id="site-header"></header>
+
+<main>
+  <section class="wrap hero" id="check">
+    <div>
+      <h1>Stop applying to jobs that do not exist.</h1>
+      <p class="lead">Paste a job link. A web agent checks the employer's own careers page and gives you a Ghost Score with the evidence.</p>
+
+      <form id="job-form" class="check-form" novalidate>
+        <div id="url-row" class="check-row">
+          <label for="job-url" class="skip">Job posting link</label>
+          <input class="field" id="job-url" type="url" inputmode="url" autocomplete="off" placeholder="Paste a job posting link">
+          <button class="btn" type="submit">Check this job</button>
+        </div>
+        <div id="text-row" hidden>
+          <label for="job-text" class="skip">Job posting text</label>
+          <textarea id="job-text" class="field" placeholder="Paste the full job description here"></textarea>
+          <div class="check-row" style="margin-top:.75rem; align-items:center; justify-content:space-between">
+            <span id="char-count" class="muted">0 / 200 characters minimum</span>
+            <button class="btn" type="submit">Check this job</button>
+          </div>
+        </div>
+        <p id="form-error" class="form-error" role="alert"></p>
+        <button type="button" id="toggle-text" class="link-btn">Paste job text instead</button>
+      </form>
+
+      <div class="examples">
+        <span>Try an example:</span>
+        <a class="chip-link real" href="report.html?demo=real">Looks real</a>
+        <a class="chip-link mid" href="report.html?demo=uncertain">Uncertain</a>
+        <a class="chip-link ghost" href="report.html?demo=ghost">Likely ghost</a>
+      </div>
+    </div>
+
+    <aside class="feed" aria-label="Example of an agent check">
+      <div class="feed-title"><span>Agent check, example</span><span>acme.com/careers</span></div>
+      <ul>
+        <li>Reading posting: Data Analyst, Acme Corp</li>
+        <li>Opening careers page</li>
+        <li>Searching for "Data Analyst"</li>
+        <li class="bad">Role not found on careers page</li>
+        <li class="bad">Same role listed 4 times elsewhere</li>
+        <li class="bad">No salary listed, open for 74 days</li>
+      </ul>
+      <div class="feed-score"><strong>78</strong><span>Likely Ghost</span></div>
+    </aside>
+  </section>
+
+  <section class="wrap section" aria-labelledby="how">
+    <h2 id="how">Three steps from link to answer</h2>
+    <ol class="steps">
+      <li><h3>Paste a link</h3><p>Drop in any public job posting.</p></li>
+      <li><h3>An agent checks the source</h3><p>It opens the employer's careers page and looks for the role.</p></li>
+      <li><h3>Get your score</h3><p>See a 0-100 Ghost Score with clear evidence behind it.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap section" aria-labelledby="why">
+    <h2 id="why">Why ghost jobs hurt</h2>
+    <div class="why">
+      <div><h3>Wasted time</h3><p>Applications to roles that were never open cost hours.</p></div>
+      <div><h3>Hidden reasons</h3><p>Companies may keep postings up to look like they are growing or to collect resumes.</p></div>
+      <div><h3>Better decisions</h3><p>Know where to focus before you apply.</p></div>
+    </div>
+    <p id="proof" class="proof"></p>
+  </section>
+
+  <section class="wrap section" aria-labelledby="faq">
+    <h2 id="faq">Questions</h2>
+    <details><summary>Is the score always right?</summary><p>No. It is an estimate based on public information, and it shows its evidence so you can judge for yourself.</p></details>
+    <details><summary>Which job sites work?</summary><p>Any public job posting link. If a link cannot be read, you can paste the job text instead.</p></details>
+    <details><summary>Is it free?</summary><p>Yes, with a free daily limit. See the <a href="pricing.html">pricing page</a>.</p></details>
+    <details><summary>Do you store my data?</summary><p>No account is needed and we do not ask for personal details.</p></details>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
