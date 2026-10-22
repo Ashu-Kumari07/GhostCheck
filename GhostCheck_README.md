@@ -4,7 +4,7 @@
 Paste a job link. A web agent checks the employer's own careers page and returns an explainable **Ghost Score (0-100)** with the evidence behind it.
 
 - Live demo: https://ghostcheck-navy.vercel.app/
-- Demo video: https://drive.google.com/file/d/1kFtSaVM0kKdvXwEJf3tpRnTzRBckK_Ao/view?usp=sharing
+- Demo video: https://drive.google.com/file/d/1kGA_QyP36JUTPvP0rJZrieYjuDfKrs_-/view?usp=sharing
 
 
 ## Problem
